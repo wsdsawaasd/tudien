@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input id="text" type="text">
+<button onclick="VNSub()">Translate</button>
+<br/>
+<br/>
+<div   id="result" >
+<script>
+    let En = ['hello', 'world', 'goodbye', 'people','wsdsawaasd','bird'];
+    let Vn = ['xin chao', 'the gioi', 'tam biet', 'moi nguoi','phat','chim'];
+    let e = null;
+
+    function VNSub() {
+        let x = document.getElementById("text").value;
+        for (let i = 0; i < En.length; i++) {
+            if (x === En[i]) {
+                e = Vn[i]
+            }
+        }
+        document.getElementById('result').innerHTML = e
+    }
+</script>
+</body>
+</html>

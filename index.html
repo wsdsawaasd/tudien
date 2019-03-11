@@ -9,17 +9,20 @@
 <button onclick="VNSub()">Translate</button>
 <br/>
 <br/>
-<div   id="result" >
+<div id="result" />
 <script>
-    let En = ['hello', 'world', 'goodbye', 'people','wsdsawaasd','bird'];
-    let Vn = ['xin chao', 'the gioi', 'tam biet', 'moi nguoi','phat','chim'];
+    let En = ['hello', 'world', 'goodbye', 'people', 'wsdsawaasd', 'bird'];
+    let Vn = ['xin chao', 'the gioi', 'tam biet', 'moi nguoi', 'phat', 'chim','khongDuocDich'];
     let e = null;
 
     function VNSub() {
         let x = document.getElementById("text").value;
         for (let i = 0; i < En.length; i++) {
             if (x === En[i]) {
-                e = Vn[i]
+                e = Vn[i];
+                break;
+            }  else {
+                e = Vn[6]
             }
         }
         document.getElementById('result').innerHTML = e
